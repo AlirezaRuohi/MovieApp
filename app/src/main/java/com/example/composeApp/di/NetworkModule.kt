@@ -1,7 +1,6 @@
 package com.example.composeApp.di
 
-import com.example.composeApp.Retrofit.RetrofitInterface
-import com.example.composeApp.model.DataModel
+import com.example.composeApp.Retrofit.ApiService
 import dagger.Module
 import dagger.Provides
 import dagger.hilt.InstallIn
@@ -25,7 +24,7 @@ object NetworkModule {
 
     @Singleton
     @Provides
-    fun provideApiService(retrofit: Retrofit): RetrofitInterface {
-        return retrofit.create(RetrofitInterface::class.java)
+    fun provideApiService(retrofit: Retrofit): ApiService {
+        return retrofit.create(ApiService::class.java)
     }
 }
